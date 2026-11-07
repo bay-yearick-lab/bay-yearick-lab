@@ -19,14 +19,14 @@ I work on high-order PDE discretizations for CFD and thermal-fluid problems: str
 Solves the small-cell problem in cut-cell CFD: preconditioned Krylov solvers converge in every sliver stress case on GPU; skew-symmetric compressible solver (Taylor-Green vortex, 96&sup3;).
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/bay-yearick-lab/high-order-turbulence-dns"><img src="assets/card_streaks.png" width="100%" alt="Near-wall streaks of streamwise velocity in a compressible turbulent channel"></a><br>
+<a href="https://github.com/bay-yearick-lab/high-order-turbulence-dns"><img src="assets/card_channel.gif" width="100%" alt="Vortex cores over near-wall streaks in a compressible turbulent channel"></a><br>
 <a href="https://github.com/bay-yearick-lab/high-order-turbulence-dns"><b>high-order-turbulence-dns</b></a><br>
 High-order B-spline DNS of compressible turbulence (M = 1.5) with provably stable filtering and automated, per-step filter control (JCP 2020).
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><img src="assets/card_wake.png" width="100%" alt="Vorticity and streamlines of an analytic wake with energy-stable B-spline wall closures"></a><br>
+<a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><img src="assets/card_wall_vortex.gif" width="100%" alt="Vortex-wall interaction"></a><br>
 <a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><b>energy-stable-sbp-closures</b></a><br>
 Provably energy-stable high-order wall closures with inf-sup-stable pressure; 1.6&times;10<sup>5</sup> lower error than the strongest published stable closure.
 </td>
