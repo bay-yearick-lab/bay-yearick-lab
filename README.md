@@ -54,7 +54,7 @@ Also: [parallel PETSc Galerkin solver](https://github.com/bay-yearick-lab/petsc-
 
 ### Patents
 
-4 granted US patents and 4 patents pending.
+Machine learning that makes solver-style decisions: selecting the right algorithm for each problem, hybrid analytic and ML models, learning from sparse data, and measuring the failure rate and correctness of deployed models. 4 granted, 4 pending.
 
 - **Automated algorithm selection.** Dynamic model selection for accurate time series forecasting, [US 2025/0104103](https://patents.google.com/patent/US20250104103A1/en) (pending). Data diagnostics route each problem to an analytic solver or a gradient-boosted model; failure rate cut from 23% to 5%.
 - **Learning from limited data.** Glass-box transfer learning algorithm for accurate forecasting, [US 2025/0390800](https://patents.google.com/patent/US20250390800A1/en) (pending). Interpretable transfer from data-rich archetypes to cold-start problems.
