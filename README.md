@@ -58,11 +58,14 @@ Also: [parallel PETSc Galerkin solver](https://github.com/bay-yearick-lab/petsc-
 
 New ML methods invented and patented in industry: 4 granted, 4 pending.
 
-- **Robust solver-control policies.** Diagnostics on each time series select an analytic or ML method, cutting the failure rate from 23% to 5%. [US 2025/0104103](https://patents.google.com/patent/US20250104103A1/en) (pending)
-- **Sequence-aware transfer learning.** Transfer learning from related time series gives accurate cold-start forecasts from 1 day of history. [US 2025/0390800](https://patents.google.com/patent/US20250390800A1/en) (pending)
-- **Hybrid numerical / ML algorithm.** Closed-form analytic solutions generate the training data for the ML model. [US 2025/0390898](https://patents.google.com/patent/US20250390898A1/en) (pending)
-- **Robustness evaluation for deployed models.** Statistical tests separate real accuracy gaps from noise in speech recognition. [US 11,626,112](https://patents.google.com/patent/US11626112B1/en), [US 11,817,098](https://patents.google.com/patent/US11817098B1/en) (granted)
-- **Solver-in-the-loop accuracy control.** Calibrated pass/fail thresholds, learned from limited expert labels, grade and monitor transcription output. [US 11,922,943](https://patents.google.com/patent/US11922943B1/en), [US 12,308,030](https://patents.google.com/patent/US12308030B2/en) (granted), [US 2025/0273215](https://patents.google.com/patent/US20250273215A1/en) (pending)
+1. **Robust solver-control policies.** Diagnostics on each time series select an analytic or ML method, cutting the failure rate from 23% to 5%. [US 2025/0104103](https://patents.google.com/patent/US20250104103A1/en) (pending)
+2. **Sequence-aware transfer learning.** Transfer learning from related time series gives accurate cold-start forecasts from 1 day of history. [US 2025/0390800](https://patents.google.com/patent/US20250390800A1/en) (pending)
+3. **Hybrid numerical / ML algorithm.** Closed-form analytic solutions generate the training data for the ML model. [US 2025/0390898](https://patents.google.com/patent/US20250390898A1/en) (pending)
+4. **Robustness evaluation for deployed models.** Statistical and practical significance tests separate real accuracy gaps from noise in speech recognition. [US 11,626,112](https://patents.google.com/patent/US11626112B1/en) (granted)
+5. **Automated failure detection and retraining triggers.** When both tests fire, the system flags the model for retraining or replacement. [US 11,817,098](https://patents.google.com/patent/US11817098B1/en) (granted)
+6. **Solver-in-the-loop accuracy control.** Error-rate thresholds calibrated against expert rankings grade every transcription as it is produced. [US 11,922,943](https://patents.google.com/patent/US11922943B1/en) (granted)
+7. **Learned accuracy categories.** A margin classifier learns category boundaries from limited expert labels. [US 12,308,030](https://patents.google.com/patent/US12308030B2/en) (granted)
+8. **Automated correctness monitoring.** Continuous grading of model outputs with alerts when quality degrades. [US 2025/0273215](https://patents.google.com/patent/US20250273215A1/en) (pending)
 
 ### Contact
 
