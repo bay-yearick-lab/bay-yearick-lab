@@ -4,10 +4,10 @@ I work on high-order PDE discretizations for CFD and thermal-fluid problems: str
 
 ### Research
 
-- **GPU-native sparse solvers.** Preconditioned Krylov solvers co-designed with the discretization so they do not fail on cut cells: polynomial-preserving aggregation holds conditioning within 3.7x per degree across 72 cut geometries (1.8e11 without it), and Jacobi-preconditioned CG converges in every stress case, down to cells 1/100,000 the size of a full cell. 14 CUDA kernels (cuBLAS strided-batched solves, cuFFT projection, CSR gather/scatter) for a device-resident periodic-hill time step.
-- **Structure-preserving discretizations.** Summation-by-parts operators on isogeometric finite element (B-spline Galerkin) spaces for cut-cell and wall-bounded domains. Mass, momentum and total-energy budgets close at round-off (6.1e-15 or below); wall closures are provably energy-stable with an inf-sup-stable pressure.
-- **Matrix-free methods.** 256&sup3; (16.8M unknowns) in 1.98 s on CPU with 6.14 KB of operator data; batched 1D line kernels instead of an assembled 3D operator. Pencil-preconditioned, matrix-free LOBPCG for inf-sup eigenvalues on Kronecker-sum operators up to 513 basis functions per direction.
-- **Scientific ML.** ([pinn-boundary-conditioning](https://github.com/bay-yearick-lab/pinn-boundary-conditioning)) Conditioning of physics-informed neural networks and DeepONets, data-driven solver control by parameter selection, hybrid analytic and ML models, and patented methods for automated algorithm selection and learning from sparse data.
+- **GPU-native sparse solvers.** Krylov solvers co-designed with the discretization: polynomial-preserving aggregation keeps cut-cell conditioning within 3.7x (vs 1.8e11), so preconditioned CG converges in every stress case. 14 CUDA kernels.
+- **Structure-preserving discretizations.** Summation-by-parts operators on B-spline finite element spaces; mass, momentum and energy conserved to round-off; provably energy-stable wall closures.
+- **Matrix-free methods.** Batched 1D line kernels instead of assembled 3D operators: 16.8M unknowns in 1.98 s with 6.14 KB of operator data.
+- **Scientific ML.** Conditioning of PINNs and DeepONets, automated solver control, hybrid analytic and ML models, automated algorithm selection.
 
 ### Selected projects
 
@@ -16,24 +16,36 @@ I work on high-order PDE discretizations for CFD and thermal-fluid problems: str
 <td width="50%" valign="top">
 <a href="https://github.com/bay-yearick-lab/gpu-cutcell-navier-stokes"><img src="https://raw.githubusercontent.com/bay-yearick-lab/gpu-cutcell-navier-stokes/main/assets/hero.png" width="100%" alt="Vortex street past a sharply cut cylinder"></a><br>
 <a href="https://github.com/bay-yearick-lab/gpu-cutcell-navier-stokes"><b>gpu-cutcell-navier-stokes</b></a><br>
-High-order B-spline cut-cell CFD that solves the small-cell problem. Jacobi-preconditioned CG converges in 25 of 25 sliver stress cases, with GPU sparse PCG and CUDA kernels on cuBLAS and cuFFT.
+Solves the small-cell problem in cut-cell CFD: preconditioned Krylov solvers converge in every sliver stress case on GPU. CUDA kernels with cuBLAS and cuFFT.
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><img src="assets/wall_vortex.gif" width="360" alt="Vortex-wall interaction"></a><br>
+<a href="https://github.com/bay-yearick-lab/pinn-boundary-conditioning"><img src="https://raw.githubusercontent.com/bay-yearick-lab/pinn-boundary-conditioning/main/assets/hero.png" width="100%" alt="Conditioning valley of penalty-enforced PINNs"></a><br>
+<a href="https://github.com/bay-yearick-lab/pinn-boundary-conditioning"><b>pinn-boundary-conditioning</b></a><br>
+Exact conditioning laws for boundary penalties in PINNs and DeepONets; hard constraints 9x more accurate, theory within 0.36% of measurement.
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><img src="https://raw.githubusercontent.com/bay-yearick-lab/energy-stable-sbp-closures/main/assets/hero.png" width="100%" alt="Wake flow with energy-stable B-spline wall closures"></a><br>
 <a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><b>energy-stable-sbp-closures</b></a><br>
-Provably energy-stable B-spline summation-by-parts wall closures. After six wall transits of closed-box acoustics: 1.6&times;10<sup>5</sup> lower error than the strongest stable published closure.
+Provably energy-stable high-order wall closures with inf-sup-stable pressure; 1.6&times;10<sup>5</sup> lower error than the strongest published stable closure.
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/bay-yearick-lab/high-order-turbulence-dns"><img src="https://raw.githubusercontent.com/bay-yearick-lab/high-order-turbulence-dns/main/assets/hero.png" width="100%" alt="Vortex cores over near-wall streaks in a compressible channel"></a><br>
+<a href="https://github.com/bay-yearick-lab/high-order-turbulence-dns"><b>high-order-turbulence-dns</b></a><br>
+High-order B-spline DNS of compressible turbulence with provably stable filtering and automated, per-step filter control (JCP 2020).
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/bay-yearick-lab/no-3d-matrices"><img src="https://raw.githubusercontent.com/bay-yearick-lab/no-3d-matrices/main/assets/hero.png" width="100%" alt="A 3D grid swept along x, y and z lines"></a><br>
 <a href="https://github.com/bay-yearick-lab/no-3d-matrices"><b>no-3d-matrices</b></a><br>
-Finite difference, compact, Galerkin/IGA, ADI and fast Poisson solvers as batched 1D banded kernels: 256&sup3; (16.8M unknowns) in 1.98 s on CPU with 6.14 KB of operator data. <a href="https://arxiv.org/abs/2606.25148">arXiv:2606.25148</a>
+Matrix-free Cartesian solvers as batched 1D banded kernels: 16.8M unknowns in 1.98 s with 6.14 KB of operator data. <a href="https://arxiv.org/abs/2606.25148">arXiv</a>
 </td>
 <td width="50%" valign="top">
-<img src="assets/tgv_rollup.gif" width="100%" alt="Vorticity isosurfaces in a compressible Taylor-Green vortex"><br>
-<b>Compressible Taylor-Green vortex, 96&sup3;</b><br>
-Skew-symmetric compressible solver: vortex tubes stretch into sheets and roll up. Isosurfaces of vorticity magnitude, coloured by dilatation.
+<a href="https://github.com/bay-yearick-lab/petsc-bspline-compressible"><img src="https://raw.githubusercontent.com/bay-yearick-lab/petsc-bspline-compressible/main/assets/hero.png" width="100%" alt="Parallel PETSc solver stack"></a><br>
+<a href="https://github.com/bay-yearick-lab/petsc-bspline-compressible"><b>petsc-bspline-compressible</b></a><br>
+Parallel Fortran and PETSc Galerkin B-spline solver for 3D compressible Navier-Stokes: distributed arrays, GMRES and CG, MPI.
 </td>
 </tr>
 </table>
