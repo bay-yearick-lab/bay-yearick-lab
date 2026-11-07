@@ -56,13 +56,13 @@ Also: [parallel PETSc Galerkin solver](https://github.com/bay-yearick-lab/petsc-
 
 ### Patents
 
-Machine learning that makes solver-style decisions: selecting the right algorithm for each problem, hybrid analytic and ML models, learning from sparse data, and measuring the failure rate and correctness of deployed models. 4 granted, 4 pending.
+New ML methods invented and patented in industry: 4 granted, 4 pending.
 
-- **Solver-control policy: picks the right algorithm per problem, failure rate 23% → 5%.** Dynamic model selection for accurate time series forecasting, [US 2025/0104103](https://patents.google.com/patent/US20250104103A1/en) (pending). Data diagnostics route each problem to an analytic solver or a gradient-boosted model; failure rate cut from 23% to 5%.
-- **Learning across related problems: 1 day of data matches 90-day accuracy.** Glass-box transfer learning algorithm for accurate forecasting, [US 2025/0390800](https://patents.google.com/patent/US20250390800A1/en) (pending). Interpretable transfer from data-rich archetypes to cold-start problems.
-- **Hybrid numerical/ML algorithm: closed-form solutions train the ML model.** Genre-adaptive analytic exponential modeling for accurate forecasting, [US 2025/0390898](https://patents.google.com/patent/US20250390898A1/en) (pending). Closed-form analytic solutions generate training data for ML learners.
-- **Failure-rate evaluation: statistical tests separate real failures from noise.** Bias detection in speech recognition models, [US 11,626,112](https://patents.google.com/patent/US11626112B1/en) and [US 11,817,098](https://patents.google.com/patent/US11817098B1/en) (granted). Statistical and practical significance tests that separate real failures from noise.
-- **Correctness evaluation: calibrated pass/fail thresholds from limited labels.** KPI-threshold selection and categorizing audio transcriptions, [US 11,922,943](https://patents.google.com/patent/US11922943B1/en) and [US 12,308,030](https://patents.google.com/patent/US12308030B2/en) (granted), [US 2025/0273215](https://patents.google.com/patent/US20250273215A1/en) (pending). Calibrated thresholds learned from limited expert labels.
+- **Automated algorithm selection for forecasting.** Data diagnostics choose an analytic or ML model for each time series, cutting the failure rate from 23% to 5%. [US 2025/0104103](https://patents.google.com/patent/US20250104103A1/en) (pending)
+- **Transfer learning from limited data.** Accurate cold-start forecasts from 1 day of history. [US 2025/0390800](https://patents.google.com/patent/US20250390800A1/en) (pending)
+- **Hybrid numerical/ML algorithm.** Closed-form analytic solutions generate training data for the ML learner. [US 2025/0390898](https://patents.google.com/patent/US20250390898A1/en) (pending)
+- **Evaluation methods for speech recognition models.** Statistical tests that separate real accuracy gaps from noise. [US 11,626,112](https://patents.google.com/patent/US11626112B1/en), [US 11,817,098](https://patents.google.com/patent/US11817098B1/en) (granted)
+- **Correctness evaluation for transcription models.** Calibrated pass/fail thresholds learned from limited expert labels. [US 11,922,943](https://patents.google.com/patent/US11922943B1/en), [US 12,308,030](https://patents.google.com/patent/US12308030B2/en) (granted), [US 2025/0273215](https://patents.google.com/patent/US20250273215A1/en) (pending)
 
 ### Contact
 
