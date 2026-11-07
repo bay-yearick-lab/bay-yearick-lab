@@ -21,7 +21,7 @@ Solves the small-cell problem in cut-cell CFD: preconditioned Krylov solvers con
 <td width="50%" valign="top">
 <a href="https://github.com/bay-yearick-lab/high-order-turbulence-dns"><img src="assets/card_channel.gif" width="100%" alt="Vortex cores over near-wall streaks in a compressible turbulent channel"></a><br>
 <a href="https://github.com/bay-yearick-lab/high-order-turbulence-dns"><b>high-order-turbulence-dns</b></a><br>
-High-order B-spline DNS of compressible turbulence (M = 1.5) with provably stable filtering and automated, per-step filter control (JCP 2020).
+High-order B-spline DNS of compressible turbulence (M = 1.5) with provably stable, boundary-consistent stabilization and automated per-step solver control (JCP 2020).
 </td>
 </tr>
 <tr>
