@@ -19,7 +19,7 @@ I work on high-order PDE discretizations for CFD and thermal-fluid problems: str
 Solves the small-cell problem in cut-cell CFD: preconditioned Krylov solvers converge in every sliver stress case on GPU; skew-symmetric compressible solver (Taylor-Green vortex, 96&sup3;).
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/bay-yearick-lab/high-order-turbulence-dns"><img src="assets/card_channel.gif" width="100%" alt="Vortex cores over near-wall streaks in a compressible turbulent channel"></a><br>
+<a href="https://github.com/bay-yearick-lab/high-order-turbulence-dns"><img src="assets/card_channel_volume.gif" width="100%" alt="Vortex cores over near-wall streaks in a compressible turbulent channel"></a><br>
 <a href="https://github.com/bay-yearick-lab/high-order-turbulence-dns"><b>high-order-turbulence-dns</b></a><br>
 High-order B-spline DNS of compressible turbulence (M = 1.5) with provably stable, boundary-consistent stabilization and automated per-step solver control (JCP 2020).
 </td>
