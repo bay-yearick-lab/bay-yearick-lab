@@ -19,7 +19,7 @@ I work on high-order PDE discretizations for CFD and thermal-fluid problems: str
 High-order B-spline cut-cell CFD that solves the small-cell problem. Jacobi-preconditioned CG converges in 25 of 25 sliver stress cases, with GPU sparse PCG and CUDA kernels on cuBLAS and cuFFT.
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><img src="assets/wall_vortex.gif" width="100%" alt="Vortex-wall interaction"></a><br>
+<a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><img src="assets/wall_vortex.gif" width="360" alt="Vortex-wall interaction"></a><br>
 <a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><b>energy-stable-sbp-closures</b></a><br>
 Provably energy-stable B-spline summation-by-parts wall closures. After six wall transits of closed-box acoustics: 1.6&times;10<sup>5</sup> lower error than the strongest stable published closure.
 </td>
