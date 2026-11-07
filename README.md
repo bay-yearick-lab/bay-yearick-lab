@@ -26,7 +26,7 @@ High-order B-spline DNS of compressible turbulence (M = 1.5) with provably stabl
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><img src="assets/card_wall_vortex.gif" width="100%" alt="Vortex-wall interaction"></a><br>
+<a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><img src="assets/card_wake.png" width="100%" alt="Vorticity and streamlines of an analytic wake with energy-stable B-spline wall closures"></a><br>
 <a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><b>energy-stable-sbp-closures</b></a><br>
 Provably energy-stable high-order wall closures with inf-sup-stable pressure; 1.6&times;10<sup>5</sup> lower error than the strongest published stable closure.
 </td>
