@@ -14,41 +14,31 @@ I work on high-order PDE discretizations for CFD and thermal-fluid problems: str
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/bay-yearick-lab/gpu-cutcell-navier-stokes"><img src="https://raw.githubusercontent.com/bay-yearick-lab/gpu-cutcell-navier-stokes/main/assets/hero.png" width="100%" alt="Vortex street past a sharply cut cylinder"></a><br>
+<a href="https://github.com/bay-yearick-lab/gpu-cutcell-navier-stokes"><img src="assets/card_tgv.gif" width="100%" alt="Compressible Taylor-Green vortex, vorticity isosurfaces"></a><br>
 <a href="https://github.com/bay-yearick-lab/gpu-cutcell-navier-stokes"><b>gpu-cutcell-navier-stokes</b></a><br>
-Solves the small-cell problem in cut-cell CFD: preconditioned Krylov solvers converge in every sliver stress case on GPU. CUDA kernels with cuBLAS and cuFFT.
+Solves the small-cell problem in cut-cell CFD: preconditioned Krylov solvers converge in every sliver stress case on GPU; skew-symmetric compressible solver (Taylor-Green vortex, 96&sup3;).
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/bay-yearick-lab/pinn-boundary-conditioning"><img src="https://raw.githubusercontent.com/bay-yearick-lab/pinn-boundary-conditioning/main/assets/hero.png" width="100%" alt="Conditioning valley of penalty-enforced PINNs"></a><br>
-<a href="https://github.com/bay-yearick-lab/pinn-boundary-conditioning"><b>pinn-boundary-conditioning</b></a><br>
-Exact conditioning laws for boundary penalties in PINNs and DeepONets; hard constraints 9x more accurate, theory within 0.36% of measurement.
+<a href="https://github.com/bay-yearick-lab/high-order-turbulence-dns"><img src="assets/card_channel.gif" width="100%" alt="Vortex cores over near-wall streaks in a compressible turbulent channel"></a><br>
+<a href="https://github.com/bay-yearick-lab/high-order-turbulence-dns"><b>high-order-turbulence-dns</b></a><br>
+High-order B-spline DNS of compressible turbulence (M = 1.5) with provably stable filtering and automated, per-step filter control (JCP 2020).
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><img src="https://raw.githubusercontent.com/bay-yearick-lab/energy-stable-sbp-closures/main/assets/hero.png" width="100%" alt="Wake flow with energy-stable B-spline wall closures"></a><br>
+<a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><img src="assets/card_wall_vortex.gif" width="100%" alt="Vortex-wall interaction"></a><br>
 <a href="https://github.com/bay-yearick-lab/energy-stable-sbp-closures"><b>energy-stable-sbp-closures</b></a><br>
 Provably energy-stable high-order wall closures with inf-sup-stable pressure; 1.6&times;10<sup>5</sup> lower error than the strongest published stable closure.
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/bay-yearick-lab/high-order-turbulence-dns"><img src="https://raw.githubusercontent.com/bay-yearick-lab/high-order-turbulence-dns/main/assets/hero.png" width="100%" alt="Vortex cores over near-wall streaks in a compressible channel"></a><br>
-<a href="https://github.com/bay-yearick-lab/high-order-turbulence-dns"><b>high-order-turbulence-dns</b></a><br>
-High-order B-spline DNS of compressible turbulence with provably stable filtering and automated, per-step filter control (JCP 2020).
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<a href="https://github.com/bay-yearick-lab/no-3d-matrices"><img src="https://raw.githubusercontent.com/bay-yearick-lab/no-3d-matrices/main/assets/hero.png" width="100%" alt="A 3D grid swept along x, y and z lines"></a><br>
-<a href="https://github.com/bay-yearick-lab/no-3d-matrices"><b>no-3d-matrices</b></a><br>
-Matrix-free Cartesian solvers as batched 1D banded kernels: 16.8M unknowns in 1.98 s with 6.14 KB of operator data. <a href="https://arxiv.org/abs/2606.25148">arXiv</a>
-</td>
-<td width="50%" valign="top">
-<a href="https://github.com/bay-yearick-lab/petsc-bspline-compressible"><img src="https://raw.githubusercontent.com/bay-yearick-lab/petsc-bspline-compressible/main/assets/hero.png" width="100%" alt="Parallel PETSc solver stack"></a><br>
-<a href="https://github.com/bay-yearick-lab/petsc-bspline-compressible"><b>petsc-bspline-compressible</b></a><br>
-Parallel Fortran and PETSc Galerkin B-spline solver for 3D compressible Navier-Stokes: distributed arrays, GMRES and CG, MPI.
+<a href="https://github.com/bay-yearick-lab/high-order-periodic-bspline"><img src="assets/card_turbulence.gif" width="100%" alt="Vorticity magnitude in periodic turbulence"></a><br>
+<a href="https://github.com/bay-yearick-lab/high-order-periodic-bspline"><b>high-order-periodic-bspline</b></a><br>
+High-order periodic B-spline operators with spectral-like resolution: up to 43x more accurate than the spectral-like compact scheme, conservation to round-off.
 </td>
 </tr>
 </table>
+
+Also: **[pinn-boundary-conditioning](https://github.com/bay-yearick-lab/pinn-boundary-conditioning)** (conditioning laws for PINNs and DeepONets; hard constraints 9x more accurate, theory within 0.36%), [no-3d-matrices](https://github.com/bay-yearick-lab/no-3d-matrices) (matrix-free batched line solvers), [petsc-bspline-compressible](https://github.com/bay-yearick-lab/petsc-bspline-compressible) (parallel PETSc, GMRES/CG, MPI), [energy-conserving-cutcell](https://github.com/bay-yearick-lab/energy-conserving-cutcell), [sharp-immersed-boundary-projection](https://github.com/bay-yearick-lab/sharp-immersed-boundary-projection), [sbp-closure-optimizer](https://github.com/bay-yearick-lab/sbp-closure-optimizer).
 
 ### Publications and software
 
