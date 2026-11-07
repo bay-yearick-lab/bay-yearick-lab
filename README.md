@@ -1,4 +1,4 @@
-<img src="assets/banner.png" alt="Isosurfaces of vorticity magnitude in a compressible Taylor-Green vortex, coloured by dilatation" width="100%">
+<img src="assets/banner_yongyibay.png" alt="Isosurfaces of vorticity magnitude in a compressible Taylor-Green vortex, coloured by dilatation" width="100%">
 
 I work on high-order PDE discretizations for CFD and thermal-fluid problems: structure-preserving operators, sparse iterative and direct solvers, matrix-free methods, and GPU kernels in C++, Python and CUDA. PhD in Computational Aerospace Engineering (UIUC, 2019), five years in an NNSA exascale simulation center, then six years leading applied ML in industry. Director of Data Science and ML at NBCUniversal; 4 granted US patents and 4 patents pending.
 
