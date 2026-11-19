@@ -1,10 +1,11 @@
 <img src="assets/banner_yongyibay.png" alt="Isosurfaces of vorticity magnitude in a compressible Taylor-Green vortex, coloured by dilatation" width="100%">
 
-I work on high-order PDE discretizations for CFD and thermal-fluid problems: structure-preserving operators, sparse iterative and direct solvers, matrix-free methods, and GPU kernels in C++, Python and CUDA. PhD in Computational Aerospace Engineering (UIUC, 2019), five years in an NNSA exascale simulation center, then six years leading applied ML in industry. Director of Data Science and ML at NBCUniversal; 4 granted US patents and 4 patents pending.
+I lead applied AI and data science teams, and I do research at two ends of the field: the science of large language models (evaluation, RL fine-tuning, test-time scaling) and high-order numerical methods for PDEs on GPUs (structure-preserving operators, sparse iterative and direct solvers, matrix-free methods, CUDA kernels). PhD in Computational Aerospace Engineering (UIUC, 2019), five years in an NNSA exascale simulation center, then six years building and leading applied ML and AI in industry at Wells Fargo, USAA and NBCUniversal. Director of Data Science and ML at NBCUniversal; 4 granted US patents and 4 patents pending.
 
 ### Research
 
-- **GPU-native sparse solvers.** Krylov solvers co-designed with the discretization: polynomial-preserving aggregation keeps cut-cell conditioning within 3.7x (vs 1.8e11), so preconditioned CG converges in every stress case. 14 CUDA kernels.
+- **LLM and agentic AI science.** Exact results for when RL fine-tuning and extra sampling pay off: the pass@k single-crossing law between base and RL-tuned models ([code](https://github.com/bay-yearick-lab/passk-single-crossing-law)), the modal and correlation ceilings of test-time scaling ([arXiv:2606.28661](https://arxiv.org/abs/2606.28661), [code](https://github.com/bay-yearick-lab/sampling-ceilings)), and GRPO, Dr. GRPO and DAPO as operations on one group-standard-deviation identity ([arXiv:2607.00152](https://arxiv.org/abs/2607.00152), [code](https://github.com/bay-yearick-lab/grpo-standard-deviation-identity)).
+- **GPU-native sparse solvers.** Krylov solvers for cut-cell discretizations: polynomial-preserving aggregation keeps cut-cell conditioning within 3.7x (vs 1.8e11), so preconditioned CG converges in every stress case. 14 CUDA kernels.
 - **Structure-preserving discretizations.** Summation-by-parts operators on B-spline finite element spaces; mass, momentum and energy conserved to round-off; provably energy-stable wall closures.
 - **Matrix-free methods.** Batched 1D line kernels instead of assembled 3D operators: 16.8M unknowns in 1.98 s with 6.14 KB of operator data.
 - **Scientific ML.** Conditioning of PINNs and DeepONets, automated solver control, hybrid analytic and ML models, automated algorithm selection.
@@ -42,6 +43,9 @@ Also: **[pinn-boundary-conditioning](https://github.com/bay-yearick-lab/pinn-bou
 
 ### Publications and software
 
+- Y. Y. Bay, K. A. Yearick. When more sampling hurts: the modal ceiling and correlation ceiling of test-time scaling. [arXiv:2606.28661](https://arxiv.org/abs/2606.28661) (2026) · [code](https://github.com/bay-yearick-lab/sampling-ceilings)
+- Y. Y. Bay, K. A. Yearick. GRPO, Dr. GRPO, and DAPO are three operations on one number: the group-standard-deviation identity. [arXiv:2607.00152](https://arxiv.org/abs/2607.00152) (2026) · [code](https://github.com/bay-yearick-lab/grpo-standard-deviation-identity)
+- Y. Y. Bay, K. A. Yearick. The single-crossing law: the pass@k crossover in RLVR is a theorem, not a finding. Manuscript · [code](https://github.com/bay-yearick-lab/passk-single-crossing-law)
 - Y. Y. Bay et al. Boundary consistent B-spline filtering schemes and application to high fidelity simulations of turbulence. *Journal of Computational Physics* 419 (2020). [doi:10.1016/j.jcp.2020.109680](https://doi.org/10.1016/j.jcp.2020.109680) · [code](https://github.com/bay-yearick-lab/high-order-turbulence-dns)
 - Y. Y. Bay, K. A. Yearick. No 3D Matrices: a unified tensor-product view of matrix-free Cartesian PDE solvers. [arXiv:2606.25148](https://arxiv.org/abs/2606.25148) (2026) · [code](https://github.com/bay-yearick-lab/no-3d-matrices)
 - Y. Y. Bay, K. A. Yearick. Structure-preserving B-spline cut-cell flow solvers on the GPU. In preparation · [code](https://github.com/bay-yearick-lab/gpu-cutcell-navier-stokes)
@@ -58,12 +62,12 @@ Also: [parallel PETSc Galerkin solver](https://github.com/bay-yearick-lab/petsc-
 
 New ML methods invented and patented in industry: 4 granted, 4 pending.
 
-1. **Robust solver-control policies.** Diagnostics on each time series select an analytic or ML method, cutting the failure rate from 23% to 5%. [US 2025/0104103](https://patents.google.com/patent/US20250104103A1/en) (pending)
+1. **Automated model selection.** Diagnostics on each time series select an analytic or ML method, cutting the failure rate from 23% to 5%. [US 2025/0104103](https://patents.google.com/patent/US20250104103A1/en) (pending)
 2. **Sequence-aware transfer learning.** Transfer learning from related time series gives accurate cold-start forecasts from 1 day of history. [US 2025/0390800](https://patents.google.com/patent/US20250390800A1/en) (pending)
-3. **Hybrid numerical / ML algorithm.** Closed-form analytic solutions generate the training data for the ML model. [US 2025/0390898](https://patents.google.com/patent/US20250390898A1/en) (pending)
+3. **Hybrid analytic and machine learning models.** Closed-form analytic solutions generate the training data for the ML model. [US 2025/0390898](https://patents.google.com/patent/US20250390898A1/en) (pending)
 4. **Robustness evaluation for deployed models.** Statistical and practical significance tests separate real accuracy gaps from noise in speech recognition. [US 11,626,112](https://patents.google.com/patent/US11626112B1/en) (granted)
-5. **Automated failure detection and retraining triggers.** When both tests fire, the system flags the model for retraining or replacement. [US 11,817,098](https://patents.google.com/patent/US11817098B1/en) (granted)
-6. **Solver-in-the-loop accuracy control.** Error-rate thresholds calibrated against expert rankings grade every transcription as it is produced. [US 11,922,943](https://patents.google.com/patent/US11922943B1/en) (granted)
+5. **Automated failure detection and retraining triggers.** A continuation of the first patent: when both tests fire, the system flags the model for retraining or replacement. [US 11,817,098](https://patents.google.com/patent/US11817098B1/en) (granted)
+6. **Automated accuracy control.** Error-rate thresholds calibrated against expert rankings grade every transcription as it is produced. [US 11,922,943](https://patents.google.com/patent/US11922943B1/en) (granted)
 7. **Learned accuracy categories.** A margin classifier learns category boundaries from limited expert labels. [US 12,308,030](https://patents.google.com/patent/US12308030B2/en) (granted)
 8. **Automated correctness monitoring.** Continuous grading of model outputs with alerts when quality degrades. [US 2025/0273215](https://patents.google.com/patent/US20250273215A1/en) (pending)
 
